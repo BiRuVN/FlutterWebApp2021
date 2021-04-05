@@ -21,8 +21,10 @@ environment:
     sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+    dependencies:
     flutter:
         sdk: flutter
+    firebase_core: "0.7.0"
     english_words: ^3.1.5
     rxdart: ^0.26.0
     http: any
