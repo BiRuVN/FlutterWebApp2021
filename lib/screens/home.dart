@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:blog/screens/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:http/http.dart' as http;
@@ -33,6 +34,17 @@ class _HomeState extends State<Home> {
             title: Text("Home"),
             elevation: 0.0,
             actions: [
+              Padding(
+                  padding: EdgeInsets.all(8.0),
+                  // ignore: deprecated_member_use
+                  child: FlatButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LoginPage()));
+                      },
+                      child: Text("Login"))),
               Padding(
                   padding: EdgeInsets.all(8.0),
                   // ignore: deprecated_member_use
@@ -108,5 +120,9 @@ class _HomeState extends State<Home> {
     setState(() {
       posts.add(item);
     });
+  }
+
+  void login() {
+    print("sdjhsjdhs");
   }
 }
